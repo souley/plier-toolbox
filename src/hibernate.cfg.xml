@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!--
+    Document   : hibernate.cfg.xml
+    Created on : 26 april 2011, 16:59
+    Author     : Souley
+    Description:
+        Purpose of the document follows.
+-->
+<hibernate-configuration>
+  <session-factory>
+    <!-- JDBC connection pool (use the built-in) -->
+    <property name="hibernate.c3p0.min_size">5</property>
+    <property name="hibernate.c3p0.max_size">20</property>
+    <property name="hibernate.c3p0.timeout">1800</property>
+    <property name="hibernate.c3p0.max_statements">50</property>
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="hibernate.current_session_context_class">thread</property>
+    <!-- Disable the second-level cache  -->
+    <property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+    <property name="hibernate.cache.use_second_level_cache">false</property>
+    <!-- Echo all executed SQL to stdout -->
+    <!--<property name="show_sql">true</property>-->
+    <!-- Drop and re-create the database schema on startup -->
+    <!--<property name="hibernate.hbm2ddl.auto">create-drop</property>-->
+    <!--<property name="hbm2ddl.import_file">removefk.sql</property>-->
+    <!--<mapping resource="opm.hbm.xml"/>-->
+  </session-factory>
+</hibernate-configuration>
